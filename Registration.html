@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="modal">
+        <button type="button" class="close">
+          <img src="./icons/close.svg" alt="close" />
+        </button>
+
+        <section class="register">
+          <div class="auth__tabs">
+            <a href="#" class="tab">Login</a>
+            <span class="divider">|</span>
+            <a href="#" class="tab active">Register</a>
+          </div>
+
+          <form class="form">
+            <p class="form-text">Enter your email and password to register.</p>
+
+            <input type="text" name="username" placeholder="Username" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+            />
+            <input
+              class="password"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+            />
+
+            <button type="submit" class="register-btn">Register</button>
+          </form>
+
+          <div class="social-login">
+            <div class="divider-social">
+              <span></span>
+              <p>Or register with</p>
+              <span></span>
+            </div>
+
+            <button type="button" class="social-btn">
+              <img src="./icons/google_icon.svg" alt="Google" />
+              Continue with Google
+            </button>
+
+            <button type="button" class="social-btn">
+              <img src="./icons/facebook_icon.svg" alt="Facebook" />
+              Continue with Facebook
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Cera Pro", sans-serif;
+  margin: 0;
+  
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.modal {
+  position: relative;
+  background: white;
+  border-bottom: 10px solid #46A358;
+  padding-bottom: 25px;
+
+}
+
+.register {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.close {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close img {
+  width: 18px;
+  height: 18px;
+}
+
+
+
+
+
+.auth__tabs {
+  margin-top: 52px;
+  display: inline-flex;
+  gap: 10px;
+
+}
+
+.tab {
+  color: #3D3D3D;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.active {
+  color: #46A358;
+}
+
+.divider {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-text {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #3D3D3D;
+}
+
+.form input {
+  /* width: 300px; */
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+
+}
+.form input::placeholder {
+  color: #A5A5A5;
+  opacity: 0.5;
+}
+.register-btn{
+  margin-top: 25px;
+  /* width: 300px; */
+  padding: 16px 0 13px;
+  background-color: #46A358;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  border: none;
+  cursor: pointer;
+}
+.password{
+  background: url("../icons/pswrd_eye.svg") no-repeat right 10px center;
+  
+}
+
+.divider-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.divider-social span {
+  flex: 1;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.divider-social p {
+  line-height: 16px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #3D3D3D;
+  white-space: nowrap;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 1px solid #EAEAEA;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: #727272;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.social-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-login{
+  width: 300px;
+}
