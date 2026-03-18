@@ -33,7 +33,13 @@ body {
 
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -122,7 +128,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .form input {
-  /* width: 300px; */
   border: 1px solid #EAEAEA;
   border-radius: 6px;
   padding: 12px 14px;
@@ -211,13 +216,33 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header {
-  padding: 30px 0 0 0;
+  padding-top: 30px;
 
 }
 
 .header__inner {
   border-bottom: 0.3px solid #46A35880;
   padding-bottom: 18px;
+}
+
+.btn {
+  display: inline-block;
+  background: #46A358;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+
+
+}
+
+.btn:hover {
+  background: #3d8f4c;
 }
 
 .logo,
@@ -262,7 +287,16 @@ h1, h2, h3, h4, h5, h6, p {
 
 .nav li {
   display: inline-block;
-  margin-right: 50px;
+}
+
+.nav li+li {
+  margin-left: 50px;
+}
+
+.nav .nav-link--active {
+  font-weight: 700;
+
+
 }
 
 .nav ul li a {
@@ -271,6 +305,10 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 16px;
   color: #3D3D3D;
 
+}
+
+.nav .nav-link--active::after {
+  opacity: 1;
 }
 
 .nav-link {
@@ -301,23 +339,22 @@ h1, h2, h3, h4, h5, h6, p {
   opacity: 1;
 }
 
-.login {
-  text-align: right;
+.nav:hover .nav-link--active:not(:hover)::after {
+  opacity: 0;
 }
 
-.login-btn {
-  display: inline-block;
+.nav:hover .nav-link--active:not(:hover) {
+  font-weight: 400;
+}
+
+
+.header .btn {
   width: 100px;
   height: 35px;
-  background: #46A358;
-  color: #FFFFFF;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
   line-height: 35px;
 }
+
+
 
 .login-btn img {
   width: 16px;
@@ -359,7 +396,6 @@ main {
 }
 
 h1 {
-  font-weight: 900;
   font-size: 70px;
   line-height: 70px;
   text-transform: uppercase;
@@ -377,19 +413,11 @@ h1 span {
   color: #727272;
 }
 
-.shop-btn{
-  
-font-weight: 700;
-font-size: 16px;
-line-height: 20px;
-text-transform: uppercase;
-color: #FFFFFF;
-background-color: #46A358;
-width: 140px;
-height: 40px;
-border-radius: 6px;
- border: none;
-margin-top: 44px;
-line-height: 40px;
-cursor: pointer;
+.hero .btn {
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 44px;
+  text-transform: uppercase;
+
 }
