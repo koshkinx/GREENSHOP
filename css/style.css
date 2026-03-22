@@ -489,7 +489,7 @@ h1 span {
 .products-content {
   display: inline-block;
   width: calc(100% - 310px);
-
+padding-left: 50px;
 }
 
 .clearfix::after {
