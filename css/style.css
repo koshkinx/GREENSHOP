@@ -355,13 +355,9 @@ p {
   opacity: 1;
 }
 
-.nav:hover .nav-link--active:not(:hover)::after {
-  opacity: 0;
-}
 
-.nav:hover .nav-link--active:not(:hover) {
-  font-weight: 400;
-}
+
+
 
 
 .header .btn {
@@ -445,6 +441,8 @@ h1 span {
   float: left;
   width: 310px;
   padding: 14px 0 0 18px;
+  background: #FBFBFB;
+
 
 }
 
@@ -457,7 +455,7 @@ h1 span {
   list-style: none;
   padding: 0;
   margin: 0 0 377px 12px;
-  background-color: #FBFBFB;
+
 }
 
 .categories a {
@@ -471,12 +469,17 @@ h1 span {
   margin-top: 23px;
 }
 
-.categories li a.active {
+.categories a.active {
   color: #46A358;
+  font-weight: 700;
 }
 
 .categories a:hover {
   color: #46A358;
+}
+
+.sale a {
+  display: block;
 }
 
 .sale img {
@@ -497,6 +500,7 @@ h1 span {
 
 .tabs {
   float: left;
+  padding-left: 0;
 
 }
 
@@ -504,7 +508,8 @@ h1 span {
   display: inline-block;
   margin-right: 30px;
 }
-.tabs li:first-child{
+
+.tabs .tabs--active {
   padding-bottom: 7px;
   border-bottom: 2px solid #46A358;
 }
@@ -523,28 +528,13 @@ h1 span {
   color: #46A358;
 }
 
-.tabs  a {
+.tabs a {
   position: relative;
   text-decoration: none;
   color: #3D3D3D;
   padding-bottom: 5px;
 }
 
-/* .tabs a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: #46A358;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.tabs a.active::after {
-  opacity: 1;
-} */
 
 
 
@@ -573,17 +563,22 @@ h1 span {
 
 .product-card {
   display: inline-block;
-  background-color: #FBFBFB;
+  margin-top: 0;
+}
+
+.product-card img {
+  background: #FBFBFB;
+
 }
 
 .product-card-title {
   color: #3D3D3D;
-  font-weight: 400;
   font-size: 16px;
   line-height: 16px;
 }
 
 .product-card-price {
+  margin-top: 6px;
   font-weight: 700;
   font-size: 18px;
   line-height: 16px;
