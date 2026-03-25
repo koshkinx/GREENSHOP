@@ -4,26 +4,40 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('../fonts/CeraPro-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
 
 
 @font-face {
-  font-family: "Cera Pro";
-  src: url("../fonts/CeraPro-Regular.woff") format("woff");
-  font-weight: 400;
+  font-family: 'Cera Pro';
+  src: url('../fonts/CeraPro-Bold.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Cera Pro";
-  src: url("../fonts/CeraPro-Medium.woff") format("woff");
+  font-family: 'Cera Pro';
+  src: url('../fonts/CeraPro-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Cera Pro";
-  src: url("../fonts/CeraPro-Bold.woff") format("woff");
-  font-weight: 700;
+  font-family: 'Cera Pro';
+  src: url('../fonts/CeraPro-Regular.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -312,7 +326,9 @@ p {
 }
 
 .nav-link {
+  display: inline-block;
   position: relative;
+  min-width: 80px;
 }
 
 .nav-link::after {
@@ -339,13 +355,9 @@ p {
   opacity: 1;
 }
 
-.nav:hover .nav-link--active:not(:hover)::after {
-  opacity: 0;
-}
 
-.nav:hover .nav-link--active:not(:hover) {
-  font-weight: 400;
-}
+
+
 
 
 .header .btn {
@@ -365,6 +377,7 @@ p {
 /* HERO */
 main {
   margin-top: 12px;
+  padding-bottom: 82px;
 }
 
 .hero-text {
@@ -396,6 +409,7 @@ main {
 }
 
 h1 {
+  font-weight: 900;
   font-size: 70px;
   line-height: 70px;
   text-transform: uppercase;
@@ -420,4 +434,188 @@ h1 span {
   margin-top: 44px;
   text-transform: uppercase;
 
+}
+.products{
+  margin-top: 50px;
+}
+
+
+.sidebar {
+  float: left;
+  width: 310px;
+  padding: 14px 0 0 18px;
+  background: #FBFBFB;
+
+
+}
+
+.sidebar h3 {
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.categories {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 377px 12px;
+
+}
+
+.categories a {
+  text-decoration: none;
+  color: #3D3D3D;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.categories li {
+  margin-top: 23px;
+}
+
+.categories a.active {
+  color: #46A358;
+  font-weight: 700;
+}
+
+.categories a:hover {
+  color: #46A358;
+}
+
+.sale a {
+  display: block;
+}
+
+.sale img {
+  width: 100%;
+}
+
+.products-content {
+  display: inline-block;
+  width: calc(100% - 310px);
+  padding-left: 50px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.tabs {
+  float: left;
+  padding-left: 0;
+
+}
+
+.tabs li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.tabs .tabs--active {
+  padding-bottom: 7px;
+  border-bottom: 2px solid #46A358;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: #3D3D3D;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+
+
+}
+
+.tabs a:hover {
+  color: #46A358;
+}
+
+.tabs a {
+  position: relative;
+  text-decoration: none;
+  color: #3D3D3D;
+  padding-bottom: 5px;
+}
+
+
+
+
+.tabs li a.active {
+  color: #46A358;
+
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 16px;
+
+}
+
+
+
+.sort {
+  float: right;
+  font-size: 15px;
+  color: #3D3D3D;
+  margin: 15px 0;
+}
+
+.sort #sort {
+  border: none;
+  cursor: pointer;
+}
+
+.product-card {
+  display: inline-block;
+  margin-top: 0;
+}
+
+.product-card img {
+  background: #FBFBFB;
+
+}
+
+.product-card-title {
+  color: #3D3D3D;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.product-card-price {
+  margin-top: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.pagination {
+  text-align: right;
+  clear: both;
+  margin-top: 90px;
+}
+
+.page {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #3D3D3D;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.page.active {
+  background: #46A358;
+  color: #fff;
+  border-color: #46A358;
+}
+
+.page:hover {
+  background: #46A358;
+  color: #fff;
+  border-color: #46A358;
+  font-weight: 300;
 }
