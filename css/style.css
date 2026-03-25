@@ -235,6 +235,9 @@ p {
 }
 
 .header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border-bottom: 0.3px solid #46A35880;
   padding-bottom: 18px;
 }
@@ -259,15 +262,9 @@ p {
   background: #3d8f4c;
 }
 
-.logo,
-.nav,
-.login {
-  display: inline-block;
-  vertical-align: middle;
-}
 
 .logo {
-  width: 20%;
+  margin-right: auto;
 
 }
 
@@ -276,16 +273,10 @@ p {
   height: 34.3px;
 }
 
-.nav {
-
-  width: 60%;
-  text-align: center;
-
-}
 
 .login {
-  width: 19%;
-  text-align: right;
+
+  margin-left: auto;
 
 }
 
@@ -294,22 +285,17 @@ p {
 }
 
 .nav ul {
+  display: flex;
+  gap: 50px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav li {
-  display: inline-block;
-}
 
-.nav li+li {
-  margin-left: 50px;
-}
 
 .nav .nav-link--active {
   font-weight: 700;
-
 
 }
 
@@ -328,20 +314,17 @@ p {
 .nav-link {
   display: inline-block;
   position: relative;
-  min-width: 80px;
+
 }
 
 .nav-link::after {
   content: "";
   position: absolute;
-
   left: 0;
   bottom: -25px;
-
   width: 100%;
   height: 3px;
   background: #46A358;
-
   opacity: 0;
   transition: 0.3s;
 }
@@ -351,19 +334,13 @@ p {
   font-size: 16px;
 }
 
-.nav-link:hover::after {
-  opacity: 1;
-}
-
-
-
-
-
 
 .header .btn {
-  width: 100px;
-  height: 35px;
-  line-height: 35px;
+  padding: 7px 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 
@@ -371,7 +348,6 @@ p {
 .login-btn img {
   width: 16px;
   height: 16px;
-  vertical-align: middle;
 }
 
 /* HERO */
@@ -381,24 +357,25 @@ main {
 }
 
 .hero-text {
-  display: inline-block;
-  margin-left: 40px;
-  width: calc(100% - 560px);
-  vertical-align: middle;
+  width: 60%;
+  flex-shrink: 0;
 }
 
 .hero-image {
-  display: inline-block;
-  vertical-align: middle;
-  width: 507px;
+  max-width: 500px;
 }
 
 .hero-image img {
   width: 100%;
+  display: block;
 }
 
 .hero-inner {
+  display: flex;
+  align-items: center;
   background: #f5f5f5;
+  padding: 40px;
+
 }
 
 .subtitle {
@@ -421,6 +398,7 @@ h1 span {
 }
 
 .description {
+  padding-right: 114px;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -428,25 +406,39 @@ h1 span {
 }
 
 .hero .btn {
-  width: 140px;
-  height: 40px;
-  line-height: 40px;
+  padding: 11px 27px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 44px;
   text-transform: uppercase;
 
 }
-.products{
+
+/* ===PRODUCTS=== */
+
+.products .container {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.products {
   margin-top: 50px;
 }
 
 
 .sidebar {
-  float: left;
-  width: 310px;
-  padding: 14px 0 0 18px;
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
   background: #FBFBFB;
 
 
+}
+
+.sidebar-categories {
+  margin-left: 18px;
 }
 
 .sidebar h3 {
@@ -457,7 +449,7 @@ h1 span {
 .categories {
   list-style: none;
   padding: 0;
-  margin: 0 0 377px 12px;
+  padding-left: 12px;
 
 }
 
@@ -481,6 +473,10 @@ h1 span {
   color: #46A358;
 }
 
+.sale {
+  margin-top: auto;
+}
+
 .sale a {
   display: block;
 }
@@ -490,27 +486,27 @@ h1 span {
 }
 
 .products-content {
-  display: inline-block;
-  width: calc(100% - 310px);
-  padding-left: 50px;
+  flex: 1;
 }
 
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 
 .tabs {
-  float: left;
-  padding-left: 0;
+
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+
 
 }
 
-.tabs li {
-  display: inline-block;
-  margin-right: 30px;
-}
+
 
 .tabs .tabs--active {
   padding-bottom: 7px;
@@ -552,11 +548,12 @@ h1 span {
 
 
 
+
+
 .sort {
-  float: right;
+
   font-size: 15px;
   color: #3D3D3D;
-  margin: 15px 0;
 }
 
 .sort #sort {
@@ -564,9 +561,15 @@ h1 span {
   cursor: pointer;
 }
 
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
 .product-card {
-  display: inline-block;
-  margin-top: 0;
+  width: calc(33.333% - 20px);
 }
 
 .product-card img {
@@ -587,23 +590,156 @@ h1 span {
   line-height: 16px;
 }
 
-.pagination {
+/*  TOP BANNERS & BLOG */
+.blog-section {
+  margin-top: 100px;
+}
+
+.promo {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.promo-card {
+  display: flex;
+  padding-right: 30px;
+}
+
+.promo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+}
+
+.promo-text h3 {
+
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: end;
+  padding-left: 145px;
+
+}
+
+.promo-text p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
   text-align: right;
-  clear: both;
+  color: #727272;
+  padding-top: 9px;
+}
+
+.promo-text a {
+  margin-top: 25px;
+  margin-bottom: 46px;
+  padding: 10px 27px;
+}
+
+.blog h2 {
+  margin-top: 130px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: #3D3D3D;
+}
+
+.blog p {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #727272;
+}
+
+.blog-list {
+  margin-top: 35px;
+  display: flex;
+  gap: 42px;
+  align-items: flex-start;
+}
+
+.blog-card {
+  flex: 1;
+}
+
+.blog-card img {
+  width: 100%;
+  
+}
+
+.blog-card-text {
+  padding: 9px 10px 12px;
+  
+}
+
+.blog-card-text span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #46A358;
+
+}
+
+.blog-card-text h4 {
+  margin-top: 4px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #3D3D3D;
+}
+
+.blog-card-text p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #727272;
+  margin-top: 4px;
+  text-align: left;
+}
+
+.blog-card-text a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #3D3D3D;
+  text-decoration: none;
+  margin-top: 9px;
+}
+.blog-card-text a:hover {
+  color: #46A358;
+}
+.blog-card-text .active{
+  color: #46A358;
+}
+
+.blog-card-text-h4{
+  padding-right: 32px;
+}
+
+
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
   margin-top: 90px;
 }
 
 .page {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
+  padding: 9px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #E5E5E5;
   border-radius: 4px;
   text-decoration: none;
   color: #3D3D3D;
-  margin-left: 10px;
   font-size: 18px;
 }
 
@@ -617,5 +753,4 @@ h1 span {
   background: #46A358;
   color: #fff;
   border-color: #46A358;
-  font-weight: 300;
 }
