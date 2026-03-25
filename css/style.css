@@ -435,6 +435,9 @@ h1 span {
   text-transform: uppercase;
 
 }
+.products{
+  margin-top: 50px;
+}
 
 
 .sidebar {
@@ -489,7 +492,7 @@ h1 span {
 .products-content {
   display: inline-block;
   width: calc(100% - 310px);
-padding-left: 50px;
+  padding-left: 50px;
 }
 
 .clearfix::after {
