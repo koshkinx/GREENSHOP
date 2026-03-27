@@ -605,6 +605,7 @@ h1 span {
 }
 
 .promo-card {
+  padding-top: 37px;
   padding-right: 30px;
   width: 50%;
   display: flex;
@@ -614,11 +615,11 @@ h1 span {
 
 
 .promo-card img {
-  margin-top: -80px;
+  margin-top: -64px;
 }
 
 .promo-text {
-  padding-top: 37px;
+  
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -650,7 +651,6 @@ h1 span {
 
 
   margin-top: 25px;
-  margin-bottom: 46px;
   padding: 10px 27px;
 }
 
