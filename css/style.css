@@ -56,6 +56,9 @@ h6,
 p {
   margin: 0;
 }
+img{
+  width: 100%;
+}
 
 .overlay {
   position: fixed;
@@ -592,7 +595,7 @@ h1 span {
 
 /*  TOP BANNERS & BLOG */
 .blog-section {
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .promo {
@@ -602,8 +605,16 @@ h1 span {
 }
 
 .promo-card {
-  display: flex;
   padding-right: 30px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  background: #FBFBFB;
+}
+
+
+.promo-card img {
+  margin-top: -100px;
 }
 
 .promo-text {
@@ -611,29 +622,32 @@ h1 span {
   flex-direction: column;
   align-items: end;
   justify-content: end;
+  text-align: right;
+  margin-left: -40px;
 }
 
 .promo-text h3 {
-
   font-weight: 900;
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
-  text-align: end;
-  padding-left: 145px;
+  padding-left: 120px;
 
 }
 
 .promo-text p {
-  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  text-align: right;
   color: #727272;
-  padding-top: 9px;
+  margin-top: 9px;
 }
 
-.promo-text a {
+.promo-text .btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+
   margin-top: 25px;
   margin-bottom: 46px;
   padding: 10px 27px;
@@ -669,12 +683,12 @@ h1 span {
 
 .blog-card img {
   width: 100%;
-  
+
 }
 
 .blog-card-text {
   padding: 9px 10px 12px;
-  
+
 }
 
 .blog-card-text span {
@@ -687,14 +701,12 @@ h1 span {
 
 .blog-card-text h4 {
   margin-top: 4px;
-  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   color: #3D3D3D;
 }
 
 .blog-card-text p {
-  font-weight: 400;
   font-size: 14px;
   line-height: 22px;
   color: #727272;
@@ -710,14 +722,14 @@ h1 span {
   text-decoration: none;
   margin-top: 9px;
 }
+
 .blog-card-text a:hover {
   color: #46A358;
 }
-.blog-card-text .active{
-  color: #46A358;
-}
 
-.blog-card-text-h4{
+
+
+.blog-card-text-h4 {
   padding-right: 32px;
 }
 
