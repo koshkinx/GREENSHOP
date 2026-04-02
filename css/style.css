@@ -318,11 +318,11 @@ img {
   position: relative;
 }
 
-.dropdown>li:after {
+.dropdown>li:has(.submenu):after {
   content: "";
   width: 10px;
   height: 10px;
-  border: solid #FFFFFF;
+  border: solid #3D3D3D;
   border-width: 1px 1px 0 0;
   transform: rotate(45deg) translateY(-50%);
   display: inline-block;
@@ -334,12 +334,16 @@ img {
 .dropdown>li:has(.submenu):hover:after {
   border-color: #EDF6EE;
   transform: rotate(-135deg) translateY(7px);
-} 
+}
+
+
 
 
 .dropdown li:hover .submenu {
   display: block;
 }
+
+
 
 
 /* .has-submenu > a {
@@ -373,7 +377,7 @@ img {
 }
 
 .submenu {
-  padding-left: 2px; 
+  padding-left: 2px;
   top: 40px;
   position: fixed;
   left: 100%;
