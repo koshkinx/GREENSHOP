@@ -288,12 +288,115 @@ img {
   text-decoration: none;
 }
 
-.nav ul {
+.nav>ul {
   display: flex;
   gap: 50px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  padding: 10px 0;
+  z-index: 100;
+  width: 188px;
+  padding-top: 40px;
+}
+
+.dropdown li {
+  list-style: none;
+  background: #EDF6EE;
+  position: relative;
+}
+
+.dropdown>li:has(.submenu):after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: solid #3D3D3D;
+  border-width: 1px 1px 0 0;
+  transform: rotate(45deg) translateY(-50%);
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+}
+
+.dropdown>li:has(.submenu):hover:after {
+  border-color: #EDF6EE;
+  transform: rotate(-135deg) translateY(7px);
+}
+
+
+
+
+.dropdown li:hover .submenu {
+  display: block;
+}
+
+
+
+
+/* .has-submenu > a {
+  position: relative;
+}
+
+.has-submenu > a::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: solid #3D3D3D;
+  border-width: 1px 1px 0 0;
+
+  position: absolute;
+  right: 10px;
+  top: 50%;
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.has-submenu:hover > a::after {
+  border-color: #fff;
+  transform: translateY(-50%) rotate(-135deg);
+} */
+
+.dropdown a {
+  color: #3D3D3D;
+  display: block;
+  border-bottom: 1px solid #EDF6EE;
+  padding: 7px 14px;
+}
+
+.submenu {
+  padding-left: 2px;
+  top: 40px;
+  position: fixed;
+  left: 100%;
+  width: 178px;
+  display: none;
+}
+
+
+
+.dropdown li:hover>a {
+  background-color: #1A712A;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 16px;
+
+}
+
+.nav-item:hover .dropdown {
+  display: block;
 }
 
 
@@ -311,7 +414,7 @@ img {
 
 }
 
-.nav .nav-link--active::after {
+.nav .nav-link--active:after {
   opacity: 1;
 }
 
@@ -321,7 +424,7 @@ img {
 
 }
 
-.nav-link::after {
+.nav-link:after {
   content: "";
   position: absolute;
   left: 0;
@@ -333,9 +436,20 @@ img {
   transition: 0.3s;
 }
 
+.nav-item:hover>.nav-link::after {
+  opacity: 1;
+}
+
 .nav-link:hover {
-  transform: scale(1.05);
+  color: black;
   font-size: 16px;
+
+}
+
+.nav-item:hover>a {
+  color: black;
+  font-size: 16px;
+  opacity: 1;
 }
 
 
