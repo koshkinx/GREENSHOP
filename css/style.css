@@ -456,7 +456,7 @@ a {
 /* HERO */
 main {
   margin-top: 12px;
-  padding-bottom: 82px;
+
 }
 
 .hero-text {
@@ -954,30 +954,35 @@ h1 span {
   display: flex;
   gap: 60px;
   background-color: #FBFBFB;
+  padding: 25px;
 }
 
 .features__list {
-  width: 191%;
+
   display: flex;
   gap: 30px;
+  flex: 1.6;
 
 }
 
 .features__item {
-  padding: 110px 0px 0px 0px;
+  padding-top: 110px;
   position: relative;
 }
 
 .features__item--garden {
   background: url("../img/garden.svg") no-repeat;
+
 }
 
 .features__item--plant {
   background: url("../img/plant.svg") no-repeat;
+
 }
 
 .features__item--watering {
   background: url("../img/watering.svg") no-repeat;
+
 }
 
 .features__item p {
@@ -1001,6 +1006,7 @@ h1 span {
 
 .features__newsletter {
   padding-top: 13px;
+  flex: 1;
 }
 
 .newsletter-form input {
@@ -1030,7 +1036,7 @@ h1 span {
   color: #727272;
   margin-top: 18px;
   line-height: 22px;
-
+  text-align: justify;
 
 }
 
@@ -1038,12 +1044,16 @@ h1 span {
   background: linear-gradient(90deg, #EDF6EF 0%, #52C368 100%);
   padding: 25px 0;
 }
+.footer-top__item--logo {
+  flex: 0 0 auto;
+}
 
 .footer-top__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #3D3D3D;
+   gap: 40px;
 
 }
 
@@ -1053,6 +1063,7 @@ h1 span {
   gap: 10px;
   font-size: 14px;
   color: #3D3D3D;
+  /* flex: 1; */
 }
 
 .footer-top__item img {
@@ -1095,7 +1106,7 @@ h1 span {
 
 .footer-list a {
   color: #3D3D3D;
-   transition: 0.3s;
+  transition: 0.3s;
 }
 
 .footer-list a:hover {
@@ -1108,22 +1119,23 @@ h1 span {
 
   margin-top: 18px;
 }
+
 .social-list a:hover {
   border-color: #46A358;
 }
 
-.payment{
+.payment {
   margin-top: 33px;
-  
+
 }
 
-.footer-subtitle{
+.footer-subtitle {
   margin-bottom: 13px;
 }
 
 .footer-bottom {
   border-top: 1px solid #46A35833;
-;
+  ;
   padding: 15px 0;
   text-align: center;
 }
