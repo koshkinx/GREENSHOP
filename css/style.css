@@ -1044,6 +1044,7 @@ h1 span {
   background: linear-gradient(90deg, #EDF6EF 0%, #52C368 100%);
   padding: 25px 0;
 }
+
 .footer-top__item--logo {
   flex: 0 0 auto;
 }
@@ -1053,7 +1054,7 @@ h1 span {
   align-items: center;
   justify-content: space-between;
   color: #3D3D3D;
-   gap: 40px;
+  gap: 40px;
 
 }
 
@@ -1063,7 +1064,8 @@ h1 span {
   gap: 10px;
   font-size: 14px;
   color: #3D3D3D;
-  /* flex: 1; */
+  max-width: 220px;
+  word-break: break-word;
 }
 
 .footer-top__item img {
@@ -1098,6 +1100,11 @@ h1 span {
   gap: 30px;
 }
 
+.footer-column {
+  flex: 1;
+  min-width: 180px;
+}
+
 .footer-list {
   font-size: 14px;
   line-height: 30px;
@@ -1107,6 +1114,7 @@ h1 span {
 .footer-list a {
   color: #3D3D3D;
   transition: 0.3s;
+   overflow-wrap: break-word;
 }
 
 .footer-list a:hover {
