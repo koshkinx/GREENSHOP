@@ -1134,14 +1134,28 @@ h1 span {
   margin-top: 18px;
 }
 
-
-.social-list a svg{
+.social-icon {
+  
   transition: 0.6s;
 }
 
-.social-list a:hover svg{
+
+.social-list a {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  border: 1px solid #46A358;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+   transition: 0.6s;
+}
+
+
+
+.social-list a:hover svg {
   fill: #3D3D3D;
-   transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .payment {
