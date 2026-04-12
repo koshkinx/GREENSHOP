@@ -1088,8 +1088,10 @@ h1 span {
   display: flex;
   align-items: center;
   position: relative;
-  padding-left: 20px;
+  margin-left: 20px;
   cursor: pointer;
+  padding: 0;
+  width: fit-content;
 }
 
 .custom-check-icon {
