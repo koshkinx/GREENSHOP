@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -65,5 +65,14 @@
         </section>
       </div>
     </div>
+    <script>
+      setTimeout(() => {
+        const el = document.querySelector(".loader_background");
+        el.classList.toggle("loaded");
+      }, 1000);
+    </script>
   </body>
+  <div class="loader_background">
+    <div class="preloader"></div>
+  </div>
 </html>
