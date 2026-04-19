@@ -1571,11 +1571,26 @@ h1 span {
   }
 
   .sidebar {
-    width: 50%;
+    width: 37%;
   }
 
   .product-card {
     width: 100%;
+  }
+
+   .promo-card {
+    padding-right: 0;
+    flex-direction: column;
+  }
+
+  .promo-text {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .promo-text h3 {
+    padding-left: 0;
   }
 
   .sort {
@@ -1609,7 +1624,12 @@ h1 span {
     flex-direction: column;
     gap: 10px;
   }
-
+ .footer-main__inner {
+    justify-content: center;
+}
+.footer-column{
+  text-align: center;
+}
   
 
 }
