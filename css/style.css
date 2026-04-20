@@ -305,6 +305,7 @@ button {
 .logo--img {
   width: 150px;
   height: 34.3px;
+   display:block;
 }
 
 
@@ -562,7 +563,7 @@ h1 span {
 
 .sidebar h3 {
   font-size: 18px;
-  line-height: 16px;
+  line-height: 29px;
 }
 
 .categories {
@@ -696,8 +697,8 @@ h1 span {
 
 .product-card__image {
   display: flex;
-  justify-content: center; 
-  align-items: center;     
+  justify-content: center;
+  align-items: center;
   position: relative;
   background: #FBFBFB;
   padding-bottom: 50px;
@@ -802,7 +803,10 @@ h1 span {
 .promo-card {
   padding-top: 37px;
   padding-right: 30px;
-  width: 50%;
+  
+  /* width: 50%; */
+  flex:1;
+  /* min-width:0; */
   display: flex;
   align-items: center;
   background: #FBFBFB;
@@ -1306,7 +1310,13 @@ h1 span {
 
 
 /* mobile first */
+@media(max-width:1050px){
+  .promo-text h3 {
+  
+  padding-left: 0;
 
+}
+}
 
 @media (max-width: 992px) {
   .blog-list {
@@ -1340,13 +1350,10 @@ h1 span {
     margin-top: 70px;
   }
 
-   .promo{
+  .promo {
     flex-direction: column;
   }
 
-  .promo-card{
-    width: 100%;
-  }
 
 
 
@@ -1355,17 +1362,17 @@ h1 span {
 
 
 @media (max-width: 854px) {
-  
+
 
   .sidebar {
     width: 30%;
   }
 
   .products-list {
-    
+
     gap: 15px;
-    
-}
+
+  }
 }
 
 @media(max-width: 838px) {
@@ -1438,7 +1445,7 @@ h1 span {
     width: calc(50% - 20px);
   }
 
-  
+
 
   .footer-main__inner {
     flex-wrap: wrap;
@@ -1551,7 +1558,7 @@ h1 span {
     position: absolute;
     top: 100%;
     right: 0;
-    background: rgba(237, 246, 238, 0.60);
+    background: #FBFBFB;
     transform: translateX(120%);
     transition: transform .4s;
     z-index: 1000;
@@ -1569,7 +1576,7 @@ h1 span {
   }
 
   .nav li {
-    
+
     border-bottom: 1px solid #46A358;
   }
 
@@ -1605,8 +1612,9 @@ h1 span {
 
   .dropdown,
   .submenu {
-    display: none ;
+    display: none;
   }
+
   .nav-item:hover .dropdown {
     display: none;
   }
@@ -1634,6 +1642,7 @@ h1 span {
   }
 
   .products .container {
+    flex-direction: column;
     gap: 20px;
   }
 
@@ -1642,7 +1651,27 @@ h1 span {
   }
 
   .sidebar {
-    width: 37%;
+
+    width: 100%;
+    background: #FBFBFB;
+    padding: 15px;
+  }
+
+
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-left: 0;
+  }
+
+  .categories li {
+    margin-top: 0;
+  }
+
+  .sale {
+    display: none;
   }
 
   .product-card {
@@ -1652,6 +1681,22 @@ h1 span {
   .promo-card {
     padding-right: 0;
     flex-direction: column;
+  }
+
+  .promo-card img {
+
+    max-width: 40%;
+    margin: 0 auto;
+    
+  }
+
+  .promo-text .btn {
+    margin-bottom: 20px;
+  }
+
+  .promo {
+
+    gap: 36px;
   }
 
   .promo-text {
@@ -1708,51 +1753,40 @@ h1 span {
 }
 
 @media (max-width: 410px) {
+
+
+
   
-  .products .container{
-    flex-direction: column;
-  }
-  .sidebar{
-    width: 100%;
-     
-  }
-  .sale{
-    display: none; 
+
+  .features__item h3,
+  .features__newsletter h3{
+    font-size:20px;
+    line-height:26px;
   }
 
-   .promo-card img{
-    width: 60%;
-    margin: 0 auto;
-    display: block;
-  }
-
-   .promo-text .btn{
-    margin-bottom: 20px;
-  }
-
-  .features__item p{
-    font-size: 15px;
-    line-height: 24px;
-  }
-
+  .features__item p,
   .features__newsletter p{
-    font-size: 15px;
-    line-height: 24px;
+    font-size:14px;
+    line-height:22px;
+  }
+
+  .custom-checkbox{
+    font-size:14px;
   }
 
   .footer-top__item,
   .footer-top__item a,
   .footer-top__item address{
-    font-size: 14px;
-    line-height: 20px;
+    font-size:13px;
+    line-height:18px;
   }
-  
+
 }
 
 @media (max-width: 397px) {
-     .blog-list {
-        flex-direction: column;
-    }
+  .blog-list {
+    flex-direction: column;
+  }
 }
 
 
@@ -1766,28 +1800,21 @@ h1 span {
 
 
   .sidebar h3 {
-    font-size: 14px;
-    line-height: 12px;
+
+    /* line-height: 29px; */
   }
 
   .categories a {
 
-    font-size: 13px;
+    /* font-size: 13px; */
   }
 
   .categories li {
-    margin-top: 17px;
+    /* margin-top: 8px; */
   }
 
 
-  .tabs li a {
-    font-size: 9px;
 
-  }
-
-  .tabs li a.active {
-    font-size: 8px;
-  }
 
   .products {
     margin-top: 20px;
